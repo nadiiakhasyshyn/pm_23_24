@@ -1,103 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link type="text/css" rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>DOCUMENT</title>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript">
+        var data = [[0, 8000], [2, 40], [3, 80], [4, 160], [5, 159], [6, 370], [7, 330], [8, 350], [9, 370], [10, 400], [11, 330], [12, 350]];
+
+        var dataset = [{label: "line1",data: data}];
+
+        var options = {
+            series: {
+                lines: { show: true },
+                points: {
+                    radius: 3,
+                    show: true
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            $.plot($("#plot"), dataset, options);
+        });
+    </script>
+
 
 
 </head>
 
 <body>
 
-	
 
-		<!--<div class="container-default">-->
+<!--<div class="container-default">-->
 <div class="navbar-header">
-			<div class="  pageTitle">
-				<img src="img/Shape.png"></img>kanto
-			</div>
-		<div class="mainPartPageHeader" >
-			<a href="#"  >Dashboard</a> / <a href="#" >Home</a> / <a href="#" >All Site Viev</a>
-	<div class="reporting">Reporting Period
-	</div>
-			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn"> Last 30 Day's </button>
-				<div id="myDropdown" class="dropdown-content">
-				  <a href="#">Link 1</a>
-				  <a href="#">Link 2</a>
-				  <a href="#">Link 3</a>
-				</div>
-			  </div>
+    <div class="  pageTitle">
+        <img src="img/Shape.png">kanto
+    </div>
+    <div class="mainPartPageHeader">
+        <div class="header">
+            <div class="header_points">
+                <a href="#">Dashboard</a> / <a href="#">Home</a> / <a href="#">
+                <div class="asv"> All Site Viev</div>
+            </a>
+            </div>
+            <div class="reporting">
+                Reporting Period
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"> Last 30 Day's</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
 
-			<div class="visitors"><div class="photoVisitors"><img src="img/visitors_icon_10595.png" ></div>
-<div>
-				<br><button class="visitorsButton">
-					Visitors
-</button>
-	<p class="textForVisitors"><img src="" > 125 k (.50%)</p>
+
+
+
+        </div>
+
+
+        <div class="mainDiv ">
+
+            <div class="firstButton button1"><img src="img/visitors_icon_10595.png">
+
+                <button class="visitorsButton">
+                    Visitors
+                </button>
+                <p><img src=""> 125 k (.50%)</p>
+            </div>
+
+            <div class="firstButton button2 "> <img src="img/visitors_icon_10606.png">
+                <button class="visitorsButton">
+                    New Order
+                </button>
+                <p><img src=""> 3900K</p>
+            </div>
+
+            <div class="firstButton button3 "><img src="img/visitors_icon_10613.png">
+                <button class="visitorsButton">
+                    Sales
+                </button>
+                <p><img src=""> 9000K</p>
+            </div>
+
+            <div class="firstButton button4"><img src="img/visitors_icon_10620.png">
+                <button class="visitorsButton">
+                    Shipping
+                </button>
+                <p><img src=""> 888K</p>
+            </div>
+
+        </div>
+        <div class="flot-container">
+            <div id="plot" class="flot-placeholder">
+
+
+
+        </div>
+    </div>
+
+
+
 
 
 </div>
-			</div>
-			<div class="newOrders"><img src="img/visitors_icon_10606.png" > </div>
-			<div class="sales"><img src="img/visitors_icon_10613.png" ></div>
-			<div class="shipping"><img src="img/visitors_icon_10620.png" >  </div>
 
 
-			</div>
-		  </div>
-		</div>
-
-
-
-
-
+</div>
 
 
 <nav class="burger_menu">
-<div class="nav_content">
-	<div class="photo">
-		<img src="img/image_bg_10267 (1).png">
-		<div class="photo_text">
-			<h3>Shah Yusuf Ahmed</h3>
-			<h4>Graphics Designer</h4>
-		</div>
-	</div>
-	<div class="nav_point">
-		<img class="nav_img" src="img/dashboard_icon_10502.png">
-		<h3>Dashboard</h3> <h3> ▼ </h3>
-	</div>
-	<div class="nav_point"><img class="nav_img"  src="img/layouts_icon_10505 (1).png"> <h3>Layouts</h3>   </div>
-	<div class="nav_point"><img  class="nav_img" src="img/pages_icon_10504.png"><h3>Pages</h3></div>
-	<div class="nav_point"><h5>ELEMENTS</h5></div>
+    <div class="nav_content">
+        <div class="photo">
+            <img src="img/image_bg_10267 (1).png">
+            <div class="photo_text">
+                <h3>Shah Yusuf Ahmed</h3>
+                <h4>Graphics Designer</h4>
+            </div>
+        </div>
+        <div class="nav_point">
+            <img class="nav_img" src="img/dashboard_icon_10502.png">
+            <h3>Dashboard</h3>
+            <h3><i class="arrow down"></i></h3>
+        </div>
+        <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
+            <h3>Layouts</h3></div>
+        <div class="nav_point"><img class="nav_img" src="img/pages_icon_10504.png">
+            <h3>Pages</h3></div>
+        <div class="nav_point element"><h5>ELEMENTS</h5>
+
+            <!--<div class="element">
+                <button onclick="myFunction()" class="Elements"> Last 30 Day's </button>
+                <div id="myElements" class="element-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>-->
 
 
-</div>
+<ul class="element">
+                    <li>Invoice +</li>
+                    <li>Charts</li>
+                    <li >Snippets</li>
+                    <li >UI Widgets</li>
+                    <li > Offers</li>
+                    <li> Forms</li>
+                    <li> Plugin</li>
+                    <li>Email </li>
+                    <li> Message</li>
+                    <li>notification</li>
+</ul>
+
+        </div>
+
+
+    </div>
 
 
 </nav>
-
-
-
-
-<
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>	
-<script src="js/script.js"> </script>
+<script src="js/script.js"></script>
 </body>
 </html>
 
