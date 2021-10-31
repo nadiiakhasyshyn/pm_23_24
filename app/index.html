@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,28 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>DOCUMENT</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.js"></script>
     <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="http://www.pureexample.com/js/flot/jquery.flot.min.js"></script>
+
+    <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.min.js"></script>
+    <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.pie.min.js"></script>
+    <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <script type="text/javascript">
-        var data = [[0, 8000], [2, 40], [3, 80], [4, 160], [5, 159], [6, 370], [7, 330], [8, 350], [9, 370], [10, 400], [11, 330], [12, 350]];
 
-        var dataset = [{label: "line1",data: data}];
-
-        var options = {
-            series: {
-                lines: { show: true },
-                points: {
-                    radius: 3,
-                    show: true
-                }
-            }
-        };
-
-        $(document).ready(function () {
-            $.plot($("#plot"), dataset, options);
-        });
     </script>
-
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
 </head>
@@ -65,8 +59,6 @@
             </div>
 
 
-
-
         </div>
 
 
@@ -80,7 +72,7 @@
                 <p><img src=""> 125 k (.50%)</p>
             </div>
 
-            <div class="firstButton button2 "> <img src="img/visitors_icon_10606.png">
+            <div class="firstButton button2 "><img src="img/visitors_icon_10606.png">
                 <button class="visitorsButton">
                     New Order
                 </button>
@@ -102,19 +94,86 @@
             </div>
 
         </div>
-        <div class="flot-container">
-            <div id="plot" class="flot-placeholder">
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+
+            </p>
+        </figure>
 
 
 
+
+
+
+
+        <div id="chartContainer" style="height: 300px; width: 100%;">
         </div>
+
+        <table class="table">
+            <tbody>
+            <thead>
+            <tr>
+                <th>IMAGE</th>
+                <th>PRODUCT NAME</th>
+                <th>PRODUCT CODE</th>
+                <th>STATUS</th>
+                <th>PURCHASED ON</th>
+                <th>PRISE</th>
+                <th>QUANTITY</th>
+                <th>TRACKING NO# </th>
+
+            </tr>
+            </thead>
+            <tr>
+                <td><img src="img/bg_6449.swg"></td>
+                <td>Your Product Title Here</td>
+                <td>3BSD59</td>
+                <td><button>Paid</button></td>
+                <td>27 Sep 2015</td>
+                <td>$99.00</td>
+                <td>2</td>
+                <td>#BG6R9853LP</td>
+            </tr>
+            <tr>
+                <td> <img src="img/bg_6459.swg"></td>
+                <td>Your Product Title Here</td>
+                <td>3BH87G</td>
+                <td><button>Pending</button></td>
+                <td>08 Sep 2015</td>
+                <td>$99.00</td>
+                <td>2</td>
+                <td>#368QRM83B</td>
+            </tr>
+            <tr>
+                <td><img src="img/bg_6469.swg"></td>
+                <td>Your Product Title Here</td>
+                <td>4D3GHT</td>
+                <td><button>Paid</button></td>
+                <td>25 Aug 2015</td>
+                <td>$99.00</td>
+                <td>2</td>
+                <td>#AXZ6F58T3V</td>
+            </tr>
+            <tr>
+                <td><img src="img/bg_6479.swg"></td>
+                <td>Your Product Title Here</td>
+                <td>5D4H3G</td>
+                <td><button>Failed</button></td>
+                <td>27 Sep 2015</td>
+                <td>$99.00</td>
+                <td>2</td>
+                <td>#SD89HK561</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <canvas id="chartJSContainer" width="600" height="400"></canvas>
+
     </div>
-
-
-
-
-
-</div>
 
 
 </div>
@@ -133,6 +192,15 @@
             <img class="nav_img" src="img/dashboard_icon_10502.png">
             <h3>Dashboard</h3>
             <h3><i class="arrow down"></i></h3>
+
+            <ul class="sub-menu">
+                <li><a href="#">Alignment</a></li>
+                <li><a href="#">Markup</a></li>
+                <li><a href="#">Comments</a></li>
+            </ul>
+
+
+
         </div>
         <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
             <h3>Layouts</h3></div>
@@ -149,21 +217,95 @@
                 </div>
             </div>-->
 
-
-<ul class="element">
-                    <li>Invoice +</li>
-                    <li>Charts</li>
-                    <li >Snippets</li>
-                    <li >UI Widgets</li>
-                    <li > Offers</li>
-                    <li> Forms</li>
-                    <li> Plugin</li>
-                    <li>Email </li>
-                    <li> Message</li>
-                    <li>notification</li>
-</ul>
-
+<div class="list">
+            <ul class="element_li">
+                <li>Invoice +</li>
+                <li>Charts</li>
+                <li>Snippets</li>
+                <li>UI Widgets</li>
+                <li> Offers</li>
+                <li> Forms</li>
+                <li> Plugin</li>
+                <li>Email</li>
+                <li> Message</li>
+                <li>notification</li>
+            </ul>
         </div>
+        </div>
+
+
+
+
+        <span class="toggle-button">
+     <div class="menu-bar menu-bar-top"></div>
+     <div class="menu-bar menu-bar-middle"></div>
+     <div class="menu-bar menu-bar-bottom"></div>
+</span>
+
+
+        <div class="menu-wrap">
+            <div class="menu-sidebar">
+                <ul class="menu">
+
+                    <li class="photo">
+                        <img src="img/image_bg_10267 (1).png">
+                        <div class="photo_text">
+                            <h3>Shah Yusuf Ahmed</h3>
+                            <h4>Graphics Designer</h4>
+                        </div>
+                    </li>
+                    <li> <div class="nav_point">
+                        <img class="nav_img" src="img/dashboard_icon_10502.png">
+                        <h3>Dashboard</h3>
+
+
+
+
+
+                        <h3><i class="arrow down"></i></h3>
+                    </div>  <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
+                        <h3>Layouts</h3></div></li>
+                    <li><a href="#">
+
+
+
+                    </a></li>
+                    <li class="menu-item-has-children"><a href="#">     </a>
+                        <span class="sidebar-menu-arrow"></span>
+                        <ul class="sub-menu">
+                            <li><a href="#">Alignment</a></li>
+                            <li><a href="#">Markup</a></li>
+                            <li><a href="#">Comments</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Get In Touch</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </div>
