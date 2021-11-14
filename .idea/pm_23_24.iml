@@ -16,5 +16,26 @@
     <orderEntry type="library" name="accessibility" level="application" />
     <orderEntry type="library" name="highcharts" level="application" />
     <orderEntry type="library" name="canvasjs" level="application" />
+    <orderEntry type="library" name="amcharts" level="application" />
+    <orderEntry type="library" name="pie" level="application" />
+    <orderEntry type="library" name="export" level="application" />
+    <orderEntry type="library" name="light" level="application" />
+    <orderEntry type="library" name="jquery-1.8.3" level="application" />
+    <orderEntry type="library" name="flot" level="application" />
+    <orderEntry type="library" name="jquery.flot" level="application" />
+    <orderEntry type="library" name="jquery.flot.pie" level="application" />
+    <orderEntry type="library" name="jquery.flot.tooltip" level="application" />
+    <orderEntry type="library" name="highcharts" level="application" />
+    <orderEntry type="library" name="exporting" level="application" />
+    <orderEntry type="library" name="accessibility" level="application" />
+    <orderEntry type="library" name="export-data" level="application" />
+    <orderEntry type="library" name="amcharts" level="application" />
+    <orderEntry type="library" name="pie" level="application" />
+    <orderEntry type="library" name="export" level="application" />
+    <orderEntry type="library" name="light" level="application" />
+    <orderEntry type="library" name="canvasjs" level="application" />
+    <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="core" level="application" />
+    <orderEntry type="library" name="charts" level="application" />
   </component>
 </module>

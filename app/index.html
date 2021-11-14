@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.js"></script>
     <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="http://www.pureexample.com/js/flot/jquery.flot.min.js"></script>
-
     <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.min.js"></script>
     <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.pie.min.js"></script>
     <script src="https://envato.stammtec.de/themeforest/melon/plugins/flot/jquery.flot.tooltip.min.js"></script>
@@ -22,33 +22,116 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-    <script type="text/javascript">
-
-    </script>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+   <!-- <script type="text/javascript"></script>-->
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-
 </head>
-
 <body>
+<div class="main">
+    <div class="sideBar">
+    <!--	<div class="menuTitle">menu</div> -->
+    <ul>
+        <li>
+            <div class="navbar-header">
+                <div class="  pageTitle">
+                    <img src="img/Shape.png">kanto
+                </div>
+            </div>
+        </li>
+        <li class="photo photo_text">
+            <img src="img/image_bg_10267 (1).png">
+            <div class="photo_text">
+                <h3>Shah Yusuf Ahmed</h3>
+                <h4>Graphics Designer</h4>
+
+            </div>
+        </li>
+
+        <div class="nav_point">
+            <h3>GENERAL</h3>
+        </div>
+        </li>
+        <li>
+            <a href="#">
 
 
-<!--<div class="container-default">-->
-<div class="navbar-header">
-    <div class="  pageTitle">
-        <img src="img/Shape.png">kanto
-    </div>
-    <div class="mainPartPageHeader">
+                <div class="nav_point">
+                    <img class="nav_img" src="img/dashboard_icon_10502.png">
+                    <h3>Dashboard</h3>
+                    <!--   <h3><i class="arrow down"></i></h3>-->
+                </div>
+            </a>
+
+            <ul class="ll">
+                <li class="ll1" ><span>Dashboard 1</span></li>
+                <li class="ll2" ><span>Dashboard 2</span></li>
+                <li class="ll3" ><span>Dashboard 3</span></li>
+                <li class="ll4" ><span>Comming Soon</span></li>
+            </ul>
+
+        </li>
+        <li><a href="#">
+            <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
+                <h3>Layouts</h3></div>
+        </a></li>
+        <li><a href="#">
+            <div class="nav_point"><img class="nav_img" src="img/pages_icon_10504.png">
+                <h3>Pages</h3></div>
+        </a></li>
+        <li>
+            <div class="nav_point element"><h5>ELEMENTS</h5>
+            </div>
+
+            <ul class="listStyle">
+                <li class="nav_point"><img class="nav_img" src="img/__10522.swg">
+                    <h3>Invoice</h3>
+                </li>
+                <li class="nav_point"><img class="nav_img" src="img/__10523.swg">
+                    <h3>Charts</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/__10530 (1).swg">
+                    <h3>Snippets</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/___10536 (1).swg">
+                    <h3>UI Widgets</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/__10538 (1).swg">
+                    <h3> Offers</h3>
+                <li class="nav_point"><img class="nav_img" src="img/__10545.swg">
+                    <h3> Forms</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/__10548 (1).swg">
+                    <h3> Plugin</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/___10551 (1).swg">
+                    <h3>Email</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/___10555 (1).swg">
+                    <h3>Message</h3></li>
+                <li class="nav_point"><img class="nav_img" src="img/__10573 (1).swg">
+                    <h3>notification</h3></li>
+                </li>
+
+
+            </ul>
+        </li>
+    </ul>
+</div>
+    <div class="content">
         <div class="header">
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <div class="header_points">
                 <a href="#">Dashboard</a> / <a href="#">Home</a> / <a href="#">
                 <div class="asv"> All Site Viev</div>
             </a>
             </div>
+
             <div class="reporting">
                 Reporting Period
             </div>
+
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"> Last 30 Day's</button>
                 <div id="myDropdown" class="dropdown-content">
@@ -57,19 +140,18 @@
                     <a href="#">Link 3</a>
                 </div>
             </div>
-
-
         </div>
 
 
+
+        <div class="mainPart">
+
         <div class="mainDiv ">
-
-            <div class="firstButton button1"><img src="img/visitors_icon_10595.png">
-
+            <div class="firstButton button1"><img src="img/visitors_icon_10595.png" alt="#">
                 <button class="visitorsButton">
                     Visitors
                 </button>
-                <p><img src=""> 125 k (.50%)</p>
+                <i class="fa-long-arrow-up" aria-hidden="true"></i><p> 125 k (.50%)</p>
             </div>
 
             <div class="firstButton button2 "><img src="img/visitors_icon_10606.png">
@@ -85,31 +167,47 @@
                 </button>
                 <p><img src=""> 9000K</p>
             </div>
-
             <div class="firstButton button4"><img src="img/visitors_icon_10620.png">
                 <button class="visitorsButton">
                     Shipping
                 </button>
                 <p><img src=""> 888K</p>
             </div>
-
         </div>
         <figure class="highcharts-figure">
             <div id="container"></div>
             <p class="highcharts-description">
-
             </p>
         </figure>
 
+            <div class="mainDiv2">
+                <span class="divs d1">$13,234 <h6> Revenue</h6></span>
+                <span class="divs d2" >2,35,090 <h6>Order</h6> </span>
+                <span class="divs d3" >$1,34,900  <h6>Tax</h6> </span>
+                <span class="divs d4 ">$1,134 <h6>Shipment</h6> </span>
+            </div>
 
 
 
 
+                    <div class="lower_graphs">
+            <div id="container3"></div>
+          <div class="content2">
+            <span id="chartContainer">  </span>
 
-
-        <div id="chartContainer" style="height: 300px; width: 100%;">
+                <span class="list2">
+                    <ul>
+                        <li class="theProduct1">The product is awesome</li>
+                        <li class="theProduct2">I am saisfied with this</li>
+                        <li class="theProduct3">Not bad but good also</li>
+                        <li class="theProduct4">Avarage product</li>
+                        <li class="theProduct5">Not usefull at all</li>
+                    </ul>
+                </span>
         </div>
-
+        </div>
+<div >
+    <div class="titletb"><button>Recent order</button></div>
         <table class="table">
             <tbody>
             <thead>
@@ -121,7 +219,7 @@
                 <th>PURCHASED ON</th>
                 <th>PRISE</th>
                 <th>QUANTITY</th>
-                <th>TRACKING NO# </th>
+                <th>TRACKING NO#</th>
 
             </tr>
             </thead>
@@ -129,17 +227,21 @@
                 <td><img src="img/bg_6449.swg"></td>
                 <td>Your Product Title Here</td>
                 <td>3BSD59</td>
-                <td><button>Paid</button></td>
+                <td>
+                    <button>Paid</button>
+                </td>
                 <td>27 Sep 2015</td>
                 <td>$99.00</td>
                 <td>2</td>
                 <td>#BG6R9853LP</td>
             </tr>
             <tr>
-                <td> <img src="img/bg_6459.swg"></td>
+                <td><img src="img/bg_6459.swg"></td>
                 <td>Your Product Title Here</td>
                 <td>3BH87G</td>
-                <td><button>Pending</button></td>
+                <td>
+                    <button>Pending</button>
+                </td>
                 <td>08 Sep 2015</td>
                 <td>$99.00</td>
                 <td>2</td>
@@ -149,7 +251,9 @@
                 <td><img src="img/bg_6469.swg"></td>
                 <td>Your Product Title Here</td>
                 <td>4D3GHT</td>
-                <td><button>Paid</button></td>
+                <td>
+                    <button>Paid</button>
+                </td>
                 <td>25 Aug 2015</td>
                 <td>$99.00</td>
                 <td>2</td>
@@ -159,159 +263,29 @@
                 <td><img src="img/bg_6479.swg"></td>
                 <td>Your Product Title Here</td>
                 <td>5D4H3G</td>
-                <td><button>Failed</button></td>
+                <td>
+                    <button>Failed</button>
+                </td>
                 <td>27 Sep 2015</td>
                 <td>$99.00</td>
                 <td>2</td>
                 <td>#SD89HK561</td>
             </tr>
-            </tbody>
+
         </table>
-
-
-
-
-        <canvas id="chartJSContainer" width="600" height="400"></canvas>
-
+</div>
+        <div class="lower_graphs">
+            <div id="container2" style="height: 400px"></div>
+            <div id="chartdiv"></div>
+        </div>
     </div>
-
-
 </div>
 
 
-<nav class="burger_menu">
-    <div class="nav_content">
-        <div class="photo">
-            <img src="img/image_bg_10267 (1).png">
-            <div class="photo_text">
-                <h3>Shah Yusuf Ahmed</h3>
-                <h4>Graphics Designer</h4>
-            </div>
-        </div>
-        <div class="nav_point">
-            <img class="nav_img" src="img/dashboard_icon_10502.png">
-            <h3>Dashboard</h3>
-            <h3><i class="arrow down"></i></h3>
-
-            <ul class="sub-menu">
-                <li><a href="#">Alignment</a></li>
-                <li><a href="#">Markup</a></li>
-                <li><a href="#">Comments</a></li>
-            </ul>
-
-
-
-        </div>
-        <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
-            <h3>Layouts</h3></div>
-        <div class="nav_point"><img class="nav_img" src="img/pages_icon_10504.png">
-            <h3>Pages</h3></div>
-        <div class="nav_point element"><h5>ELEMENTS</h5>
-
-            <!--<div class="element">
-                <button onclick="myFunction()" class="Elements"> Last 30 Day's </button>
-                <div id="myElements" class="element-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>-->
-
-<div class="list">
-            <ul class="element_li">
-                <li>Invoice +</li>
-                <li>Charts</li>
-                <li>Snippets</li>
-                <li>UI Widgets</li>
-                <li> Offers</li>
-                <li> Forms</li>
-                <li> Plugin</li>
-                <li>Email</li>
-                <li> Message</li>
-                <li>notification</li>
-            </ul>
-        </div>
-        </div>
-
-
-
-
-        <span class="toggle-button">
-     <div class="menu-bar menu-bar-top"></div>
-     <div class="menu-bar menu-bar-middle"></div>
-     <div class="menu-bar menu-bar-bottom"></div>
-</span>
-
-
-        <div class="menu-wrap">
-            <div class="menu-sidebar">
-                <ul class="menu">
-
-                    <li class="photo">
-                        <img src="img/image_bg_10267 (1).png">
-                        <div class="photo_text">
-                            <h3>Shah Yusuf Ahmed</h3>
-                            <h4>Graphics Designer</h4>
-                        </div>
-                    </li>
-                    <li> <div class="nav_point">
-                        <img class="nav_img" src="img/dashboard_icon_10502.png">
-                        <h3>Dashboard</h3>
-
-
-
-
-
-                        <h3><i class="arrow down"></i></h3>
-                    </div>  <div class="nav_point"><img class="nav_img" src="img/layouts_icon_10505 (1).png">
-                        <h3>Layouts</h3></div></li>
-                    <li><a href="#">
-
-
-
-                    </a></li>
-                    <li class="menu-item-has-children"><a href="#">     </a>
-                        <span class="sidebar-menu-arrow"></span>
-                        <ul class="sub-menu">
-                            <li><a href="#">Alignment</a></li>
-                            <li><a href="#">Markup</a></li>
-                            <li><a href="#">Comments</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Get In Touch</a></li>
-                </ul>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
     </div>
 
-
-</nav>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>
