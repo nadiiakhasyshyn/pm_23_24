@@ -24,10 +24,56 @@ window.onclick = function(event)
 
 
 
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+window.onclick = function(event)
+{
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+
+    var i;
+    for (i = 0; i < dropdowns.length; i++)
+    {
+      var openDropdown = dropdowns[i];
+
+      if (openDropdown.classList.contains('show'))  {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 
 
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+}
 
+function triggerHtmlEvent(element, eventName) {
+  var event;
+  if (document.createEvent) {
+    event = document.createEvent('HTMLEvents');
+    event.initEvent(eventName, true, true);
+    element.dispatchEvent(event);
+  } else {
+    event = document.createEventObject();
+    event.eventType = eventName;
+    element.fireEvent('on' + event.eventType, event);
+  }
+}
+
+jQuery('.lang-select').click(function() {
+  var theLang = jQuery(this).attr('data-lang');
+  jQuery('.goog-te-combo').val(theLang);
+
+  //alert(jQuery(this).attr('href'));
+  window.location = jQuery(this).attr('href');
+  location.reload();
+
+});
 
 
 $(document).ready(function() {
@@ -54,15 +100,6 @@ $(document).ready(function (){
 });
 
 
-// $(document).ready(function() {
-//   var $sidebarArrow = $('.sidebar-menu-arrow');
-//   $sidebarArrow.click(function() {
-//     $(this).next().slideToggle(300);
-//   });
-// });
-
-
-
 $(document).ready(function (){
   $('.element').click(function(event){
     $('.element_li').toggleClass('active');
@@ -70,17 +107,18 @@ $(document).ready(function (){
 });
 
 
-
 //First plot
 Highcharts.chart('container', {
   chart: {
-    type: 'areaspline'
+    type: 'areaspline',
+
   },
-  title: {
-    text: 'Earning Graph Overview',
-    align:'left'
-  },
+title:{
+    text:'',
+},
   legend: {
+
+
     layout: 'vertical',
     align: 'left',
     verticalAlign: 'top',
@@ -106,13 +144,19 @@ Highcharts.chart('container', {
       'Nov',
       'Dec'
     ],
+    minorTickInterval: 'auto',
+    startOnTick: true,
+    endOnTick: true,
 
   },
+
   yAxis: {
     title: {
-      text: 'Fruit units'
-    }
+      text: ''
+    },
+
   },
+
   tooltip: {
     shared: true,
     valueSuffix: ' units'
@@ -121,34 +165,51 @@ Highcharts.chart('container', {
     enabled: false
   },
   colors: ['#253340', '#b6597c'],
+
+
       plotOptions: {
-        series: {
-          marker: {
-            enabled: false
-          }
-        }
-      },
+    series:{
+      fillOpacity: 1
+    },
+
+          },
   series: [{
     name: 'First',
-    data: [9000, 9800, 17000, 16000, 8500, 13000, 17000,13000,14000,14200,15000,19000]
+    data: [9000, 9800, 17000, 16000, 8500, 13000, 17000,13000,14000,14200,15000,19000],
+
+    marker: {
+      enabled: false
+    },
+    fillOpacity: 1
+
   }, {
     name: 'Second',
-    data: [7800, 7500, 8800, 16800, 16500, 13000 , 11000,13200,19000,17000,12000,16000]
-  }]
+    data: [7800, 7500, 8800, 16800, 16500, 13000 , 11000,13200,19000,17000,12000,16000],
+    marker: {
+      enabled: false
+    },
+    color : {
+      linearGradient : [0, 0, 0, 200],
+
+      stops : [
+        [0, Highcharts.Color('#569470').setOpacity(0.8).get('rgba')],
+        [1, Highcharts.Color('#ba577c').setOpacity(0.8).get('rgba')],
+      ]
+
+    },
+
+  }],
+
+
 });
 
 /////
-
-
 
 ///second
 window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer",
       {
         zoomEnabled: true,
-
-
-
 
         plotOptions: {
           series: {
@@ -158,13 +219,29 @@ window.onload = function () {
             }
           }
         },
+        axisY:{
+          title: "",
+          tickLength: 0,
+          lineThickness:0,
+          margin:0,
 
+          valueFormatString:" " //comment this to show numeric values
+        },
+        axisX:{
+          title: "",
+          tickLength: 0,
+          margin:0,
+          lineThickness:0,
+          valueFormatString:" " //comment this to show numeric values
+
+        },
         data: [
           {
 
             color:['#79d59f'],
             type: "area",
             xValueType: "dateTime",
+
             dataPoints: [
               { x: 1088620200000, y :71},
               { x: 1104517800000, y : 55 },
@@ -189,13 +266,7 @@ window.onload = function () {
   chart.render();
 
 
-
-
-
 }
-
-
-
 
 //menu
 
@@ -207,8 +278,10 @@ $('.menu-icon').click(function() {  // to open sidebar
   $('.sideBar').toggleClass('slideLeft');
   $('.wrapper').toggleClass('wrappRight');
 
+
   $(this).toggleClass('menu-active');
   $('.content').toggleClass('content_active');
+  $('.res').toggleClass('res2');
   if ($(".sideBar li ul").is(":visible")) {
     $('.sideBar li ul').slideUp('fast');
     $('.sideBar .pluse').removeClass('minus');
@@ -227,7 +300,7 @@ AmCharts.makeChart("chartdiv", {
   "type": "pie",
   "theme": "light",
   "allLabels": [{
-    "text": "RES",
+    "text": "",
     "align": "center",
     "font-size":"30",
     "bold": true,
@@ -272,17 +345,19 @@ AmCharts.makeChart("chartdiv", {
   "labelText": ""
 });
 
-
-
-
 //line
 
 Highcharts.chart('container2', {
   chart: {
     type: 'line'
   },
+  yAxis:{
+
+
+  },
   xAxis: {
-    categories: ['', '', '', '', '', '', '', '', '', '', '', '']
+    categories: ['', '', '', '', '', '', '', '', '', '', '', ''],
+
   },
 
   plotOptions: {
@@ -308,41 +383,160 @@ colors:['#4bdbdb','#f1a80a'],
 $(function () {
   $('#container3').highcharts({
     chart: {
-      type: 'bar'
+      type: 'bar',
+
     },
     title: {
       text: 'Stacked bar chart'
     },
     xAxis: {
-      categories: ['US', 'APAC', 'EU', 'Africa', 'EMEA', 'LATAM']
+      categories: ['US', 'APAC', 'EU', 'Africa', 'EMEA', 'LATAM'],
+
     },
     yAxis: {
       min: 0,
       title: {
         text: 'category'
-      }
+      },
+
     },
     legend: {
       reversed: true
     },
-    plotOptions: {
-      series: {
-        stacking: 'normal',
+
+
+
+        plotOptions: {
+
+          bar: {stacking: 'percent',
+            dataLabels: {
+              enabled: true,
+              crop: false,
+              overflow: 'none',
+              y: -24,
+              x:-20,
+              verticalAlign: 'top',
+              backgroundColor:'#f22613',
+              color:'#ffffff',
+              format: '{y} %',
+
+            }
+          },
+
+          series: {
+            stacking: 'normal',
+            color: {
+              pattern: {
+                path: {
+                  d: 'M 0 10 L 10 0 M -1 1 L 1 -1 M 9 11 L 11 9',
+                  strokeWidth: 5
+                },
+                width: 10,
+                height: 10,
+                opacity: 3,
+                color:'#46c1fa',
+                backgroundColor: '#566066',
+              }
+            },
+
 
       },
 
     },
 
-      series: [{
-      name: 'Technology',
-      data: [2309.65, 3709.395, 5175.171, 2892.51, 2832.96, 2862.675],
+      series: [
 
-    }, {
-      name: 'Furniture',
-      data: [1822.08, 5244.84, 5083.96, 4297.644, 4164.05, 4626.15]
-    }, ]
+        {
+
+          data: [10, 40, 82, 15, 30],
+          color:'#949393',
+
+            dataLabels: {
+              enabled: false,
+              crop: false,
+            },
+
+
+        },
+
+          {
+      name: 'Technology',
+      data: [90 , 60, 18, 85, 70],
+          },
+        ]
   });
 });
+
+
+
+
+$(document).ready(function(){
+
+  $.getJSON("data.json", function (data){
+
+    var data_v = '';
+    $.each(data, function (key, value){
+      data_v += '<tr>';
+      data_v += '<td><img src="'+value.image+'" alt="img"></td>';
+      data_v += '<td>'+value.product_name+'</td>';
+      data_v += '<td>'+value.product_code+'</td>';
+      data_v += '<td><button class="myBot">'+value.status+'</button></td>';
+
+
+      data_v += '<td>'+value.purchased_on+'</td>';
+      data_v += '<td>'+value.price+'</td>';
+      data_v += '<td>'+value.quantity+'</td>';
+      data_v += '<td>'+value.tracking_num+'</td>';
+      data_v += '</tr>';
+
+    });
+    $('#table').append(data_v);
+  });
+});
+
+
+
+
+$(document).ready(function(){
+
+  $.getJSON("lang.json", function (data){
+
+    var data_v = '';
+    $.each(data, function (key, value){
+/*
+if($('.english').click)
+{
+  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.english + '<span class="pluse2"></span></button>';
+}
+if($('.france').click)
+{
+  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.france + '<span class="pluse2"></span></button>';
+}
+if($('.italy').click)
+{
+  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.italy + '<span class="pluse2"></span></button>';
+}
+if($('.germany').click)
+{
+  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.germany + '<span class="pluse2"></span></button>';
+}
+*/
+
+ function myF1()
+    {
+      data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.english + '<span class="pluse2"></span></button>';
+    }
+
+ document.getElementsByClassName('english').addEventListener("click", myF1);
+    });
+    $('#language').append(data_v);
+  });
+});
+
+
+
+
+
 
 
 

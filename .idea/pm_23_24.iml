@@ -35,7 +35,7 @@
     <orderEntry type="library" name="light" level="application" />
     <orderEntry type="library" name="canvasjs" level="application" />
     <orderEntry type="library" name="all" level="application" />
-    <orderEntry type="library" name="core" level="application" />
-    <orderEntry type="library" name="charts" level="application" />
+    <orderEntry type="library" name="Chart.js" level="application" />
+    <orderEntry type="library" name="all" level="application" />
   </component>
 </module>
