@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Chart.js, accessibility, all, amcharts, canvasjs, export, export-data, exporting, flot, highcharts, jquery-1.8.3, jquery.flot, jquery.flot.pie, jquery.flot.tooltip, light, pie}" />
+    <file url="PROJECT" libraries="{Chart.js, accessibility, all, amcharts, canvasjs, export, export-data, exporting, flot, highcharts, jquery-1.8.3, jquery.flot, jquery.flot.pie, jquery.flot.tooltip, js-cookie, light, pie}" />
   </component>
 </project>

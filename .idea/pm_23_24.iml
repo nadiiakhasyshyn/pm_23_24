@@ -37,5 +37,6 @@
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="Chart.js" level="application" />
     <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="js-cookie" level="application" />
   </component>
 </module>

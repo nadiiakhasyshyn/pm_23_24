@@ -28,6 +28,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "chart.js": "^3.6.0"
+    "chart.js": "^3.6.0",
+    "google-translate-api": "^2.3.0"
   }
 }

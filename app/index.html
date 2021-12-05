@@ -46,6 +46,13 @@
     <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+
+
    <!-- <script type="text/javascript"></script>-->
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
@@ -159,13 +166,19 @@
             </ul>>
 -->
 
+
+
             <div class="dropdown" id="language">
-                <button onclick="myFunction2()" class="dropbtn dropbtn2"> <span class="pluse2"></span></button>
+                <button onclick="myFunction2()" class="dropbtn dropbtn2" id="BUTTON"> <span ></span></button>
                 <div id="myDropdown2" class="dropdown-content">
-                   <a href="#googtrans(en|en)" class="lang-en lang-select english" data-lang="en">English</a>
-                    <a href="#googtrans(en|fr)" class="lang-es lang-select france" data-lang="fr">France</a>
-                    <a href="#googtrans(en|it)" class="lang-es lang-select italy" data-lang="it">Italy</a>
-                    <a href="#googtrans(en|de)" class="lang-es lang-select germany" data-lang="de">Germany</a>
+                   <a href="#googtrans(en|en)" class="lang-en lang-select " id="english" data-lang="en">English
+                       <img class="flag"src="img/lang__en.png"></a>
+                    <a href="#googtrans(en|fr)" class="lang-es lang-select" id="france" data-lang="fr">France
+                        <img class="flag2" src="img/lang__fr.png" ></a>
+                    <a href="#googtrans(en|it)" class="lang-es lang-select ii " id="italy" data-lang="it">Italy <img class="flag3"
+                            src="img/lang__it.png" ></a>
+                    <a href="#googtrans(en|de)" class="lang-es lang-select " id="germany" data-lang="de">Germany <img class="flag4"
+                            src="img/lang__de.png" ></a>
                 </div>
             </div>
 
@@ -334,7 +347,7 @@
             <div id="container2"></div>
 
             <div id="chartdiv">  <h3 class="res">RES</h3></div>
-            <h3 class="res">RES</h3>
+            <!--<h3 class="res">RES</h3>-->
         </div>
     </div>
 </div>

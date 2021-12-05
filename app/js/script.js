@@ -62,7 +62,9 @@ function triggerHtmlEvent(element, eventName) {
     event = document.createEventObject();
     event.eventType = eventName;
     element.fireEvent('on' + event.eventType, event);
+
   }
+  return false;
 }
 
 jQuery('.lang-select').click(function() {
@@ -72,7 +74,7 @@ jQuery('.lang-select').click(function() {
   //alert(jQuery(this).attr('href'));
   window.location = jQuery(this).attr('href');
   location.reload();
-
+return false;
 });
 
 
@@ -497,43 +499,23 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
 
-  $.getJSON("lang.json", function (data){
-
-    var data_v = '';
-    $.each(data, function (key, value){
-/*
-if($('.english').click)
-{
-  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.english + '<span class="pluse2"></span></button>';
-}
-if($('.france').click)
-{
-  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.france + '<span class="pluse2"></span></button>';
-}
-if($('.italy').click)
-{
-  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.italy + '<span class="pluse2"></span></button>';
-}
-if($('.germany').click)
-{
-  data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.germany + '<span class="pluse2"></span></button>';
-}
-*/
-
- function myF1()
-    {
-      data_v +='<button onClick="myFunction2()" class="dropbtn dropbtn2"> ' + value.english + '<span class="pluse2"></span></button>';
-    }
-
- document.getElementsByClassName('english').addEventListener("click", myF1);
-    });
-    $('#language').append(data_v);
+  $("#italy").click(function () {
+    sessionStorage.setItem('en', 'Italy');
   });
+$("#english").click(function () {
+  sessionStorage.setItem('en', 'English');
 });
 
+$("#france").click(function () {
+  sessionStorage.setItem('en', 'France');
+});
+$("#germany").click(function () {
+  sessionStorage.setItem('en', 'Germany');
+});
 
+let elem = document.querySelector('#BUTTON');
+  elem.innerHTML = sessionStorage.getItem("en");
 
 
 

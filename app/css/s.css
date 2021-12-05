@@ -337,24 +337,29 @@ i .fa-long-arrow-up {
   background-color: #ffffff;
 }
 
-.dropdown {
-  /*   position: absolute;
-     right: -87%;
-     margin-top: 8px;
-     margin-bottom: 10px;*/
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.76);
+  background-color: rgba(160, 223, 255, 0.76);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+.dropdown-content .flag {
+  padding-left: 25px;
+}
+.dropdown-content .flag2 {
+  padding-left: 28px;
+}
+.dropdown-content .flag3 {
+  padding-left: 45px;
+}
+.dropdown-content .flag4 {
+  padding-left: 11px;
+}
 
 .dropdown-content a {
-  color: rgba(26, 67, 148, 0.8);
+  color: rgba(14, 36, 80, 0.8);
   padding: 5px 5px;
   text-decoration: none;
   display: block;
@@ -431,24 +436,20 @@ i .fa-long-arrow-up {
   transition: 0.25s;
   z-index: 15;
 }
-
 .toggle-button:hover {
   cursor: pointer;
 }
-
 .toggle-button .menu-bar {
   position: absolute;
   border-radius: 2px;
   width: 80%;
   transition: 0.5s;
 }
-
 .toggle-button .menu-bar-top {
   border: 4px solid #555;
   border-bottom: none;
   top: 0;
 }
-
 .toggle-button .menu-bar-middle {
   height: 4px;
   background-color: #555;
@@ -456,7 +457,6 @@ i .fa-long-arrow-up {
   margin-bottom: 7px;
   top: 4px;
 }
-
 .toggle-button .menu-bar-bottom {
   border: 4px solid #555;
   border-top: none;
@@ -565,19 +565,16 @@ i .fa-long-arrow-up {
   color: #555;
 }
 
+.highcharts-data-table thead tr, .highcharts-data-table .highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
 .highcharts-data-table th {
   font-weight: 600;
   padding: 0.5em;
 }
-
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+.highcharts-data-table th td, .highcharts-data-table th .highcharts-data-table th, .highcharts-data-table th .highcharts-data-table caption {
   padding: 0.5em;
 }
-
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
@@ -592,44 +589,21 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 ul li {
   margin: 0;
   padding: 0;
   list-style-type: circle;
 }
 
-/* css for sidebar */
 .wrapper {
   transition: transform 400ms ease 0s;
   -webkit-transition: transform 400ms ease 0s;
   -moz-transition: transform 400ms ease 0s;
-  -ms-transition: transform 400ms ease 0s;
 }
 
-/* side bar css start from here */
-/* if you wants to open side bar from right side then set translate3d(100%, 0px, 0px) instead of translate3d(-100%, 0px, 0px) */
 .sideBar {
-  /*box-shadow: -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5) inset;*/
-  /*-webkit-box-shadow: -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5) inset;*/
-  /*-moz-box-shadow: -1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.5) inset;*/
   background-color: #253340;
   width: 310px;
-  /* padding: 0 0 0 0px;
-   left: 0;
-   top: 0;
-   transform: translate3d(-100%, 0px, 0px);
-   position: fixed;
-   -webkit-transform: translate3d(-100%, 0px, 0px);
-   -moz-transform: translate3d(-100%, 0px, 0px);
-   -ms-transform: translate3d(-100%, 0px, 0px);
-   transition: transform 400ms ease 0s;
-   -webkit-transition: transform 400ms ease 0s;
-   -moz-transition: transform 400ms ease 0s;
-   -ms-transition: transform 400ms ease 0s;
-   backface-visibility: hidden;
-   overflow-x: hidden;
-   overflow-y: scroll;;*/
   transition: all 0.3s linear;
 }
 
@@ -688,6 +662,24 @@ ul h3 {
   font-size: 14px;
 }
 
+.sideBar .minus {
+  background-position: right center;
+}
+
+.slideLeft {
+  transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+}
+
+.wrappRight {
+  transform: translate3d(310px, 0px, 0px);
+  -webkit-transform: translate3d(310px, 0px, 0px);
+  -moz-transform: translate3d(310px, 0px, 0px);
+  -ms-transform: translate3d(270px, 0px, 0px);
+}
+
 .sideBar .pluse {
   letter-spacing: 2px;
   position: absolute;
@@ -698,8 +690,7 @@ ul h3 {
   cursor: pointer;
   z-index: 99;
 }
-
-.pluse:before, .pluse:after {
+.sideBar .pluse:before, .sideBar .pluse:after {
   content: "";
   top: 8px;
   width: 8px;
@@ -707,13 +698,11 @@ ul h3 {
   position: absolute;
   background-color: #ffffff;
 }
-
-.pluse:before {
+.sideBar .pluse:before {
   transform: rotate(40deg);
   left: 0;
 }
-
-.pluse:after {
+.sideBar .pluse:after {
   transform: rotate(-40deg);
   left: 5.5px;
 }
@@ -728,7 +717,6 @@ ul h3 {
   cursor: pointer;
   z-index: 99;
 }
-
 .pluse2:before, .pluse2:after {
   content: "";
   top: 8px;
@@ -737,34 +725,13 @@ ul h3 {
   position: absolute;
   background-color: #161818;
 }
-
 .pluse2:before {
   transform: rotate(40deg);
   left: 0;
 }
-
 .pluse2:after {
   transform: rotate(-40deg);
   left: 3px;
-}
-
-.sideBar .minus {
-  background-position: right center;
-}
-
-.slideLeft {
-  transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -ms-transform: translate3d(0px, 0px, 0px);
-  -moz-transform: translate3d(0px, 0px, 0px);
-}
-
-/* if side bar will open  from right side then set translate3d(-270px, 0px, 0px) instead of translate3d(270px, 0px, 0px) */
-.wrappRight {
-  transform: translate3d(310px, 0px, 0px);
-  -webkit-transform: translate3d(310px, 0px, 0px);
-  -moz-transform: translate3d(310px, 0px, 0px);
-  -ms-transform: translate3d(270px, 0px, 0px);
 }
 
 .menu-icon {
@@ -779,11 +746,9 @@ ul h3 {
   top: 28px;
   padding-left: 30px;
 }
-
 .menu-icon a {
   color: #ffffff;
 }
-
 .menu-icon span {
   margin-top: -2px;
   position: absolute;
@@ -797,15 +762,13 @@ ul h3 {
   font-size: 0px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-
-.menu-icon span:before, .menu-icon span:after {
+.menu-icon:before, .menu-icon:after {
   position: absolute;
   left: 0px;
   width: 100%;
@@ -815,41 +778,17 @@ ul h3 {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.2s;
 }
-
-.menu-icon span:after {
-  -webkit-transform: translateY(250%);
-  transform: translateY(250%);
-  -moz-transform: translateY(250%);
-  -ms-transform: translateY(250%);
-}
-
-.menu-icon span:before {
+.menu-icon:before {
   -webkit-transform: translateY(-251%);
   transform: translateY(-251%);
   -moz-transform: translateY(-251%);
   -ms-transform: translateY(-251%);
 }
-
-.menu-active span {
-  -webkit-background: none;
-  -moz-background: none;
-  -ms-background: none;
-  -o-background: none;
-  background: none;
-}
-
-.menu-active span:before {
-  -webkit-transform: translateY(0) rotate(45deg);
-  -moz-transform: translateY(0) rotate(45deg);
-  -ms-transform: translateY(0) rotate(45deg);
-  transform: translateY(0) rotate(45deg);
-}
-
-.menu-active span:after {
-  -webkit-transform: translateY(0) rotate(-45deg);
-  -moz-transform: translateY(0) rotate(-45deg);
-  -ms-transform: translateY(0) rotate(-45deg);
-  transform: translateY(0) rotate(-45deg);
+.menu-icon:after {
+  -webkit-transform: translateY(250%);
+  transform: translateY(250%);
+  -moz-transform: translateY(250%);
+  -ms-transform: translateY(250%);
 }
 
 .fixedBody {
@@ -941,15 +880,10 @@ ul h3 {
   list-style-type: circle;
   display: block;
 }
-
 .list2 ul {
   list-style-type: disc;
   padding-left: 50px;
   color: #0377be;
-}
-
-ul span {
-  color: #ffffff;
 }
 
 ul.ll {
@@ -961,27 +895,27 @@ ul.ll {
   font-weight: 400;
   color: #ffffff;
 }
+ul.ll span {
+  color: #ffffff;
+}
 
-li.ll1 {
+li .ll1 {
   color: #e76292;
   font-size: 18px;
   height: 50px;
 }
-
-li.ll2 {
+li .ll2 {
   color: #46b3e8;
   font-size: 18px;
   height: 50px;
   top: 30%;
 }
-
-li.ll3 {
+li .ll3 {
   color: #da6eeb;
   font-size: 18px;
   height: 50px;
 }
-
-li.ll4 {
+li .ll4 {
   color: #8ed453;
   font-size: 18px;
   height: 50px;
@@ -1039,12 +973,6 @@ li.ll4 {
   border-bottom: 2px solid #0377be;
 }
 
-table, hr, tr, td, tbody {
-  border-top: none;
-  border-bottom: none;
-  border-collapse: collapse;
-}
-
 .table {
   height: 90%;
   width: 90%;
@@ -1055,59 +983,50 @@ table, hr, tr, td, tbody {
   max-width: 95%;
   margin: 0 auto;
 }
-
 #container .highcharts-xaxis-grid .highcharts-grid-line {
   stroke-width: 1px;
   stroke: #d8d8d8;
 }
-
 #container .highcharts-xaxis .highcharts-tick {
   stroke-width: 1px;
   stroke: #d8d8d8;
 }
-
-#container .highcharts-minor-grid-line {
+#container #container .highcharts-minor-grid-line {
   stroke-dasharray: 1, 1;
-}
-
-#container3 .highcharts-yaxis-grid .highcharts-grid-line {
-  stroke-width: 0;
-  stroke: #d8d8d8;
-}
-
-#container3 .highcharts-yaxis .highcharts-tick {
-  stroke-width: 0;
-  stroke: #d8d8d8;
-}
-
-#container3 .highcharts-xaxis-grid .highcharts-grid-line {
-  stroke-width: 1px;
-  stroke: #d8d8d8;
 }
 
 #container3 .highcharts-xaxis .highcharts-tick {
   stroke-width: 1px;
   stroke: #d8d8d8;
 }
-
-#container2 .highcharts-yaxis-grid .highcharts-grid-line {
-  stroke-width: 0;
-  stroke: #d8d8d8;
-}
-
-#container2 .highcharts-yaxis .highcharts-tick {
-  stroke-width: 0;
-  stroke: #d8d8d8;
-}
-
-#container2 .highcharts-xaxis-grid .highcharts-grid-line {
+#container3 .highcharts-xaxis-grid .highcharts-grid-line {
   stroke-width: 1px;
-  width: 50px;
+  stroke: #d8d8d8;
+}
+#container3 .highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+  stroke: #d8d8d8;
+}
+#container3 .highcharts-yaxis-grid .highcharts-grid-line {
+  stroke-width: 0;
   stroke: #d8d8d8;
 }
 
 #container2 .highcharts-xaxis .highcharts-tick {
   stroke-width: 1px;
+  stroke: #d8d8d8;
+}
+#container2 .highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 1px;
+  width: 50px;
+  stroke: #d8d8d8;
+}
+#container2 .highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+  stroke: #d8d8d8;
+}
+#container2 .highcharts-yaxis-grid .highcharts-grid-line {
+  stroke-width: 0;
   stroke: #d8d8d8;
 }
 
@@ -1146,16 +1065,6 @@ table, hr, tr, td, tbody {
   border-radius: 10px;
 }
 
-/*
-.res{
-
-  margin: 16.5% 0 0 49%;
-  z-index: 99;
-  color: #00cccc;
-  size: 20px;
-  position: absolute;
-  align-items: center;
-}*/
 .res {
   position: absolute;
   right: 17.7%;
